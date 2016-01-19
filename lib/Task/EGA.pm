@@ -48,11 +48,11 @@ sub dependencies {
         ],
         [   'BioPerl',
             1,
-            [   ['Bio::Seq'],
-                ['Bio::ASN1::EntrezGene'],
-                ['Bio::Graphics'],
-                ['Bio::Tools::Run::Alignment::Clustalw'],
-                [ 'Bio::DB::EUtilities', 1.72 ],    # 1.73 inc::TestHelper
+            [   [ 'Bio::Seq',                             0 ],
+                [ 'Bio::ASN1::EntrezGene',                0 ],
+                [ 'Bio::Graphics',                        0 ],
+                [ 'Bio::Tools::Run::Alignment::Clustalw', 0 ],
+                [ 'Bio::DB::EUtilities',                  1.72 ],    # 1.73 inc::TestHelper
             ],
         ],
         [   'Bio::Phylo',
@@ -63,14 +63,14 @@ sub dependencies {
         ],
         [   'circos',
             1,
-            [   ['Config::General'],   ['Data::Dumper'],
-                ['Font::TTF::Font'],   ['Math::Bezier'],
-                ['Math::BigInt'],      ['Math::BigFloat'],
-                ['Math::Round'],       ['Math::VecStat'],
-                ['Params::Validate'],  ['Readonly'],
-                ['Regexp::Common'],    ['Set::IntSpan'],
-                ['Statistics::Basic'], ['Text::Balanced'],
-                ['Text::Format'],
+            [   ['Config::General'], ['Data::Dumper'],
+                ['Math::Bezier'],    ['Math::BigInt'],
+                ['Math::BigFloat'],  ['Math::Round'],
+                ['Math::VecStat'],   ['Params::Validate'],
+                ['Readonly'],        ['Regexp::Common'],
+                ['Set::IntSpan'],    ['Statistics::Basic'],
+                ['Text::Balanced'],  ['Text::Format'],
+                [ 'Font::TTF::Font', 0 ],
             ],
         ],
         [   'Others',
@@ -79,23 +79,31 @@ sub dependencies {
                 ['DBD::CSV'],                  ['Path::Class'],
                 ['File::Listing'],             ['File::Remove'],
                 ['File::Rename'],              ['File::Copy::Recursive'],
-                ['List::Flatten'],             ['LWP::Online'],
-                ['LWP::Protocol::https'],      ['LWP::Protocol::socks'],
-                ['String::Compare'],
+                ['List::Flatten'],             [ 'String::Compare', 0 ],
+                [ 'LWP::Online', 0 ], [ 'LWP::Protocol::https', 0 ],
+                [ 'LWP::Protocol::socks', 0 ],
             ],
         ],
         [   'AlignDB',
             1,
-            [   ['AlignDB::IntSpan'],   ['AlignDB::Util'],
-                ['AlignDB::Stopwatch'], ['AlignDB::Codon'],
-                ['AlignDB::Util'],      ['AlignDB::Run'],
-                ['AlignDB::Window'],    ['App::Fasops'],
-                ['App::RL'],
+            [   [ 'AlignDB::IntSpan',   0 ],
+                [ 'AlignDB::Util',      0 ],
+                [ 'AlignDB::Stopwatch', 0 ],
+                [ 'AlignDB::Codon',     0 ],
+                [ 'AlignDB::Util',      0 ],
+                [ 'AlignDB::Run',       0 ],
+                [ 'AlignDB::Window',    0 ],
+                [ 'App::Fasops',        0 ],
+                [ 'App::RL',            0 ],
             ],
         ],
         [   'AlignDB extra',
             0,
-            [ ['AlignDB::DeltaG'], ['AlignDB::GC'], ['AlignDB::SQL'], ['AlignDB::ToXLSX'], ],
+            [   [ 'AlignDB::DeltaG', 0 ],
+                [ 'AlignDB::GC',     0 ],
+                [ 'AlignDB::SQL',    0 ],
+                [ 'AlignDB::ToXLSX', 0 ],
+            ],
         ],
     );
 }
@@ -127,11 +135,11 @@ sub cpanfile {
 
             for my $dep ( @{$deps} ) {
                 my ( $module, $version ) = @{$dep};
-                if ( ! defined($version) and $current ) {
+                if ( !defined($version) and $current ) {
                     $version = version_for($module);
                 }
 
-                if ( defined($version) ) {
+                if ($version) {
                     $fh->printf( "requires '%s', '%s';\n", $module, $version );
                 }
                 else {

@@ -59,10 +59,10 @@ requires 'XML::Twig', '3.49';
 requires 'XML::Writer', '0.625';
 
 # BioPerl
-requires 'Bio::Seq', '1.6.924';
-requires 'Bio::ASN1::EntrezGene', '1.70';
-requires 'Bio::Graphics', '2.39';
-requires 'Bio::Tools::Run::Alignment::Clustalw', '1.006900';
+requires 'Bio::Seq';
+requires 'Bio::ASN1::EntrezGene';
+requires 'Bio::Graphics';
+requires 'Bio::Tools::Run::Alignment::Clustalw';
 requires 'Bio::DB::EUtilities', '1.72';
 
 # Bio::Phylo
@@ -70,12 +70,11 @@ requires 'Math::CDF', '0.1';
 requires 'Math::Random', '0.72';
 requires 'PDF::API2', '2.025';
 requires 'XML::XML2JSON', '0.06';
-requires 'Bio::Phylo', '0';
+requires 'Bio::Phylo';
 
 # circos
 requires 'Config::General', '2.60';
 requires 'Data::Dumper', '2.154';
-requires 'Font::TTF::Font', '1.05';
 requires 'Math::Bezier', '0.01';
 requires 'Math::BigInt', '1.999715';
 requires 'Math::BigFloat', '1.999715';
@@ -88,6 +87,7 @@ requires 'Set::IntSpan', '1.19';
 requires 'Statistics::Basic', '1.6611';
 requires 'Text::Balanced', '2.03';
 requires 'Text::Format', '0.59';
+requires 'Font::TTF::Font';
 
 # Others
 requires 'DateTime::Format::Natural', '1.03';
@@ -99,10 +99,10 @@ requires 'File::Remove', '1.55';
 requires 'File::Rename', '0.20';
 requires 'File::Copy::Recursive', '0.38';
 requires 'List::Flatten', '0.01';
-requires 'LWP::Online', '1.08';
-requires 'LWP::Protocol::https', '6.06';
-requires 'LWP::Protocol::socks', '1.7';
-requires 'String::Compare', '0.4';
+requires 'String::Compare';
+requires 'LWP::Online';
+requires 'LWP::Protocol::https';
+requires 'LWP::Protocol::socks';
 
 # AlignDB
 requires 'AlignDB::IntSpan';
