@@ -57,7 +57,9 @@ sub dependencies {
         ],
         [   'Bio::Phylo',
             1,
-            [ ['Math::CDF'], ['Math::Random'], ['PDF::API2'], ['XML::XML2JSON'], ['Bio::Phylo'], ],
+            [   ['Math::CDF'], ['Math::Random'], ['PDF::API2'], ['XML::XML2JSON'],
+                [ 'Bio::Phylo', 0 ],
+            ],
         ],
         [   'circos',
             1,
@@ -125,11 +127,11 @@ sub cpanfile {
 
             for my $dep ( @{$deps} ) {
                 my ( $module, $version ) = @{$dep};
-                if ( !$version and $current ) {
+                if ( ! defined($version) and $current ) {
                     $version = version_for($module);
                 }
 
-                if ($version) {
+                if ( defined($version) ) {
                     $fh->printf( "requires '%s', '%s';\n", $module, $version );
                 }
                 else {

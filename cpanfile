@@ -70,7 +70,7 @@ requires 'Math::CDF', '0.1';
 requires 'Math::Random', '0.72';
 requires 'PDF::API2', '2.025';
 requires 'XML::XML2JSON', '0.06';
-requires 'Bio::Phylo', '0.58';
+requires 'Bio::Phylo', '0';
 
 # circos
 requires 'Config::General', '2.60';
