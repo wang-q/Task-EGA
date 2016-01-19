@@ -51,7 +51,7 @@
             "Archive::Extract" : "0",
             "Array::Compare" : "0",
             "Bio::ASN1::EntrezGene" : "0",
-            "Bio::DB::EUtilities" : "0",
+            "Bio::DB::EUtilities" : "1.72",
             "Bio::Graphics" : "0",
             "Bio::Phylo" : "0",
             "Bio::Seq" : "0",
@@ -148,6 +148,6 @@
          "web" : "https://github.com/wang-q/Task-EGA"
       }
    },
-   "version" : "0.0.1"
+   "version" : "0.1.0"
 }
 

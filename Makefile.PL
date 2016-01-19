@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     "Archive::Extract" => 0,
     "Array::Compare" => 0,
     "Bio::ASN1::EntrezGene" => 0,
-    "Bio::DB::EUtilities" => 0,
+    "Bio::DB::EUtilities" => "1.72",
     "Bio::Graphics" => 0,
     "Bio::Phylo" => 0,
     "Bio::Seq" => 0,
@@ -113,7 +113,7 @@ my %WriteMakefileArgs = (
     "YAML" => 0,
     "YAML::XS" => 0
   },
-  "VERSION" => "0.0.1",
+  "VERSION" => "0.1.0",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -135,7 +135,7 @@ my %FallbackPrereqs = (
   "Archive::Extract" => 0,
   "Array::Compare" => 0,
   "Bio::ASN1::EntrezGene" => 0,
-  "Bio::DB::EUtilities" => 0,
+  "Bio::DB::EUtilities" => "1.72",
   "Bio::Graphics" => 0,
   "Bio::Phylo" => 0,
   "Bio::Seq" => 0,

@@ -3,7 +3,7 @@ use Task::EGA;
 use FileHandle;
 
 # with module verions
-my $version = shift;
+my $current = shift;
 
 open my $out, ">", "cpanfile" or die $!;
-Task::EGA->cpanfile($out, $version);
+Task::EGA->cpanfile($out, $current);

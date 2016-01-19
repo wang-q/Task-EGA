@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use autodie;
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.1.0';
 
 sub dependencies {
     return (
@@ -48,12 +48,19 @@ sub dependencies {
         ],
         [   'BioPerl',
             1,
-            [   ['Bio::Seq'],            ['Bio::ASN1::EntrezGene'],
-                ['Bio::DB::EUtilities'], ['Bio::Graphics'],
+            [   ['Bio::Seq'],
+                ['Bio::ASN1::EntrezGene'],
+                ['Bio::Graphics'],
                 ['Bio::Tools::Run::Alignment::Clustalw'],
+                [ 'Bio::DB::EUtilities', 1.72 ],    # 1.73 inc::TestHelper
             ],
         ],
-        [   'circos', 1,
+        [   'Bio::Phylo',
+            1,
+            [ ['Math::CDF'], ['Math::Random'], ['PDF::API2'], ['XML::XML2JSON'], ['Bio::Phylo'], ],
+        ],
+        [   'circos',
+            1,
             [   ['Config::General'],   ['Data::Dumper'],
                 ['Font::TTF::Font'],   ['Math::Bezier'],
                 ['Math::BigInt'],      ['Math::BigFloat'],
@@ -64,11 +71,8 @@ sub dependencies {
                 ['Text::Format'],
             ],
         ],
-        [   'Bio::Phylo',
+        [   'Others',
             1,
-            [ ['Math::CDF'], ['Math::Random'], ['PDF::API2'], ['XML::XML2JSON'], ['Bio::Phylo'], ],
-        ],
-        [   'Others', 1,
             [   ['DateTime::Format::Natural'], ['File::HomeDir'],
                 ['DBD::CSV'],                  ['Path::Class'],
                 ['File::Listing'],             ['File::Remove'],
@@ -78,7 +82,7 @@ sub dependencies {
                 ['String::Compare'],
             ],
         ],
-        [   'AlignDB::*',
+        [   'AlignDB',
             1,
             [   ['AlignDB::IntSpan'],   ['AlignDB::Util'],
                 ['AlignDB::Stopwatch'], ['AlignDB::Codon'],
@@ -86,6 +90,10 @@ sub dependencies {
                 ['AlignDB::Window'],    ['App::Fasops'],
                 ['App::RL'],
             ],
+        ],
+        [   'AlignDB extra',
+            0,
+            [ ['AlignDB::DeltaG'], ['AlignDB::GC'], ['AlignDB::SQL'], ['AlignDB::ToXLSX'], ],
         ],
     );
 }
@@ -101,35 +109,35 @@ sub iter_deps {
 sub cpanfile {
     my $class   = shift;
     my $fh      = shift;
-    my $version = shift;
+    my $current = shift;
 
     $class->iter_deps(
         sub {
             my ( $name, $cond, $deps ) = @_;
-            my @modules = grep defined, map $_->[0], @$deps;
-            ( my $ident = $name ) =~ s/[^A-Za-z_]+/_/g;
 
             if ($cond) {
                 $fh->print("# $name\n");
-                for my $module (@modules) {
-                    if ($version) {
-                        $fh->printf( "requires '%s', '%s';\n", $module, version_for($module) );
-                    }
-                    else {
-                        $fh->print("requires '$module';\n");
-                    }
-                }
             }
             else {
+                ( my $ident = $name ) =~ s/[^A-Za-z_]+/_/g;
                 $fh->print( "feature '", lc($ident), "', '$name' => sub {\n" );
-                for my $module (@modules) {
-                    if ($version) {
-                        $fh->printf( "requires '%s', '%s';\n", $module, version_for($module) );
-                    }
-                    else {
-                        $fh->print("requires '$module';\n");
-                    }
+            }
+
+            for my $dep ( @{$deps} ) {
+                my ( $module, $version ) = @{$dep};
+                if ( !$version and $current ) {
+                    $version = version_for($module);
                 }
+
+                if ($version) {
+                    $fh->printf( "requires '%s', '%s';\n", $module, $version );
+                }
+                else {
+                    $fh->printf( "requires '%s';\n", $module );
+                }
+            }
+
+            if ( !$cond ) {
                 $fh->print("};\n");
             }
             $fh->print("\n");
