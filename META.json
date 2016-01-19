@@ -36,6 +36,116 @@
                }
             }
          }
+      },
+      "database_and_www" : {
+         "description" : "Database and WWW",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "DBD::mysql" : "4.033",
+                  "DBIx::Class::Helpers" : "2.032000",
+                  "DBIx::XHTML_Table" : "1.47",
+                  "DBM::Deep" : "2.0013",
+                  "IO::All" : "0.86",
+                  "IO::All::LWP" : "0.14",
+                  "Mojolicious" : "6.40",
+                  "MongoDB" : "0"
+               }
+            }
+         }
+      },
+      "develop" : {
+         "description" : "Develop",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "App::pmuninstall" : "0.30",
+                  "CPAN::Mini" : "1.111016",
+                  "CPANDB" : "0.18",
+                  "Devel::CheckLib" : "1.05",
+                  "Dist::Milla" : "0",
+                  "Import::Into" : "1.002005",
+                  "Module::Path" : "0.19",
+                  "PPI::XS" : "0.902",
+                  "Parallel::ForkManager" : "1.17",
+                  "Pod::POM::Web" : "1.20",
+                  "Proc::Background" : "1.10",
+                  "Search::Indexer" : "0.77"
+               }
+            }
+         }
+      },
+      "gtk_stuffs" : {
+         "description" : "Gtk3 stuffs",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "Cairo" : "1.106",
+                  "Cairo::GObject" : "1.004",
+                  "Glib" : "1.320",
+                  "Glib::Object::Introspection" : "0.040",
+                  "Gtk3" : "0.026"
+               }
+            }
+         }
+      },
+      "math_and_stat" : {
+         "description" : "Math and Stat",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "Math::GSL" : "0.35",
+                  "Math::Random::MT::Auto" : "6.22",
+                  "PDL" : "2.015",
+                  "Set::Light" : "0.04",
+                  "Statistics::Lite" : "3.62",
+                  "Statistics::R" : "0.34",
+                  "Statistics::TTest" : "v1.1.0"
+               }
+            }
+         }
+      },
+      "moose_related" : {
+         "description" : "Moose related",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "MooX::Options" : "4.022",
+                  "MooseX::AttributeHelpers" : "0.24",
+                  "MooseX::Storage" : "0.50"
+               }
+            }
+         }
+      },
+      "test_" : {
+         "description" : "Test::*",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "Test::Class" : "0.50",
+                  "Test::Roo" : "1.004",
+                  "Test::Taint" : "1.06",
+                  "Test::Without::Module" : "0.18"
+               }
+            }
+         }
+      },
+      "text_rtf_and_xlsx" : {
+         "description" : "text, rtf and xlsx",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "Chart::Math::Axis" : "1.06",
+                  "Excel::Writer::XLSX" : "0.88",
+                  "RTF::Writer" : "1.11",
+                  "Roman" : "1.24",
+                  "Spreadsheet::ParseExcel" : "0.65",
+                  "Spreadsheet::WriteExcel" : "2.40",
+                  "Text::Table" : "1.130",
+                  "Time::Duration" : "1.20"
+               }
+            }
+         }
       }
    },
    "prereqs" : {
@@ -163,6 +273,6 @@
          "web" : "https://github.com/wang-q/Task-EGA"
       }
    },
-   "version" : "0.1.2"
+   "version" : "0.1.3"
 }
 

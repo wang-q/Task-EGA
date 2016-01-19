@@ -115,6 +115,74 @@ requires 'AlignDB::Window';
 requires 'App::Fasops';
 requires 'App::RL';
 
+feature 'test_', 'Test::*' => sub {
+requires 'Test::Class', '0.50';
+requires 'Test::Roo', '1.004';
+requires 'Test::Taint', '1.06';
+requires 'Test::Without::Module', '0.18';
+};
+
+feature 'moose_related', 'Moose related' => sub {
+requires 'MooX::Options', '4.022';
+requires 'MooseX::Storage', '0.50';
+requires 'MooseX::AttributeHelpers', '0.24';
+};
+
+feature 'develop', 'Develop' => sub {
+requires 'App::pmuninstall', '0.30';
+requires 'CPAN::Mini', '1.111016';
+requires 'CPANDB', '0.18';
+requires 'Dist::Milla';
+requires 'Module::Path', '0.19';
+requires 'Pod::POM::Web', '1.20';
+requires 'Search::Indexer', '0.77';
+requires 'Parallel::ForkManager', '1.17';
+requires 'Proc::Background', '1.10';
+requires 'Devel::CheckLib', '1.05';
+requires 'Import::Into', '1.002005';
+requires 'PPI::XS', '0.902';
+};
+
+feature 'gtk_stuffs', 'Gtk3 stuffs' => sub {
+requires 'Glib', '1.320';
+requires 'Cairo', '1.106';
+requires 'Cairo::GObject', '1.004';
+requires 'Glib::Object::Introspection', '0.040';
+requires 'Gtk3', '0.026';
+};
+
+feature 'database_and_www', 'Database and WWW' => sub {
+requires 'DBD::mysql', '4.033';
+requires 'DBIx::Class::Helpers', '2.032000';
+requires 'DBIx::XHTML_Table', '1.47';
+requires 'DBM::Deep', '2.0013';
+requires 'MongoDB';
+requires 'Mojolicious', '6.40';
+requires 'IO::All', '0.86';
+requires 'IO::All::LWP', '0.14';
+};
+
+feature 'text_rtf_and_xlsx', 'text, rtf and xlsx' => sub {
+requires 'Roman', '1.24';
+requires 'Text::Table', '1.130';
+requires 'Time::Duration', '1.20';
+requires 'Excel::Writer::XLSX', '0.88';
+requires 'Spreadsheet::ParseExcel', '0.65';
+requires 'Spreadsheet::WriteExcel', '2.40';
+requires 'RTF::Writer', '1.11';
+requires 'Chart::Math::Axis', '1.06';
+};
+
+feature 'math_and_stat', 'Math and Stat' => sub {
+requires 'Math::Random::MT::Auto', '6.22';
+requires 'PDL', '2.015';
+requires 'Statistics::Lite', '3.62';
+requires 'Statistics::TTest', '1.1.0';
+requires 'Set::Light', '0.04';
+requires 'Math::GSL', '0.35';
+requires 'Statistics::R', '0.34';
+};
+
 feature 'aligndb_extra', 'AlignDB extra' => sub {
 requires 'AlignDB::DeltaG';
 requires 'AlignDB::GC';
