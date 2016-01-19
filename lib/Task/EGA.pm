@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use autodie;
 
-our $VERSION = '0.1.3';
+our $VERSION = '0.1.4';
 
 sub dependencies {
     return (
@@ -224,7 +224,7 @@ Task::EGA - EGA bundle
 
 =head1 SYNOPSIS
 
-    cpanm --interactive Task::EGA
+    cpanm --mirror-only --mirror https://stratopan.com/wangq/ega/full --interactive Task::EGA
 
 =head1 AUTHOR
 

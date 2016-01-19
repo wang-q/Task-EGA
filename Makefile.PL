@@ -164,7 +164,7 @@ my %WriteMakefileArgs = (
     "YAML" => "1.15",
     "YAML::XS" => "0.59"
   },
-  "VERSION" => "0.1.3",
+  "VERSION" => "0.1.4",
   "test" => {
     "TESTS" => "t/*.t"
   }
