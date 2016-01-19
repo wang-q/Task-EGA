@@ -108,27 +108,23 @@ requires 'LWP::Protocol::socks';
 requires 'AlignDB::IntSpan';
 requires 'AlignDB::Util';
 requires 'AlignDB::Stopwatch';
-requires 'AlignDB::Codon';
 requires 'AlignDB::Util';
 requires 'AlignDB::Run';
-requires 'AlignDB::Window';
 requires 'App::Fasops';
 requires 'App::RL';
 
-feature 'test_', 'Test::*' => sub {
+# Test::*
 requires 'Test::Class', '0.50';
 requires 'Test::Roo', '1.004';
 requires 'Test::Taint', '1.06';
 requires 'Test::Without::Module', '0.18';
-};
 
-feature 'moose_related', 'Moose related' => sub {
+# Moose related
 requires 'MooX::Options', '4.022';
 requires 'MooseX::Storage', '0.50';
 requires 'MooseX::AttributeHelpers', '0.24';
-};
 
-feature 'develop', 'Develop' => sub {
+# Develop
 requires 'App::pmuninstall', '0.30';
 requires 'CPAN::Mini', '1.111016';
 requires 'CPANDB', '0.18';
@@ -141,17 +137,15 @@ requires 'Proc::Background', '1.10';
 requires 'Devel::CheckLib', '1.05';
 requires 'Import::Into', '1.002005';
 requires 'PPI::XS', '0.902';
-};
 
-feature 'gtk_stuffs', 'Gtk3 stuffs' => sub {
+# Gtk3 stuffs
 requires 'Glib', '1.320';
 requires 'Cairo', '1.106';
 requires 'Cairo::GObject', '1.004';
 requires 'Glib::Object::Introspection', '0.040';
 requires 'Gtk3', '0.026';
-};
 
-feature 'database_and_www', 'Database and WWW' => sub {
+# Database and WWW
 requires 'DBD::mysql', '4.033';
 requires 'DBIx::Class::Helpers', '2.032000';
 requires 'DBIx::XHTML_Table', '1.47';
@@ -160,9 +154,8 @@ requires 'MongoDB';
 requires 'Mojolicious', '6.40';
 requires 'IO::All', '0.86';
 requires 'IO::All::LWP', '0.14';
-};
 
-feature 'text_rtf_and_xlsx', 'text, rtf and xlsx' => sub {
+# text, rtf and xlsx
 requires 'Roman', '1.24';
 requires 'Text::Table', '1.130';
 requires 'Time::Duration', '1.20';
@@ -171,22 +164,21 @@ requires 'Spreadsheet::ParseExcel', '0.65';
 requires 'Spreadsheet::WriteExcel', '2.40';
 requires 'RTF::Writer', '1.11';
 requires 'Chart::Math::Axis', '1.06';
-};
 
-feature 'math_and_stat', 'Math and Stat' => sub {
+# Math and Stat
 requires 'Math::Random::MT::Auto', '6.22';
 requires 'PDL', '2.015';
 requires 'Statistics::Lite', '3.62';
 requires 'Statistics::TTest', '1.1.0';
 requires 'Set::Light', '0.04';
-requires 'Math::GSL', '0.35';
-requires 'Statistics::R', '0.34';
-};
+requires 'Math::GSL';
+requires 'Statistics::R';
 
-feature 'aligndb_extra', 'AlignDB extra' => sub {
+# AlignDB extra
+requires 'AlignDB::Window';
+requires 'AlignDB::Codon';
 requires 'AlignDB::DeltaG';
 requires 'AlignDB::GC';
 requires 'AlignDB::SQL';
 requires 'AlignDB::ToXLSX';
-};
 
