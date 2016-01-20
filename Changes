@@ -2,8 +2,11 @@ Revision history for Task::EGA
 
 {{$NEXT}}
 
+0.1.5  2016-01-20 22:45:08 CST
+    - Remove version requirement on some modules
+
 0.1.4  2016-01-19 10:15:23 CST
-    -Install all modules
+    - Install all modules
 
 0.1.3  2016-01-19 09:50:30 CST
     - A bunch of extra modules
