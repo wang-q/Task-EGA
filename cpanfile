@@ -1,42 +1,42 @@
 # Basic set of tools
 requires 'Archive::Extract', '0.76';
 requires 'Config::Tiny';
-requires 'DB_File', '1.835';
 requires 'File::Find::Rule', '0.34';
 requires 'List::MoreUtils', '0.413';
 requires 'JSON::XS', '3.01';
 requires 'Text::CSV_XS';
 requires 'YAML', '1.15';
 requires 'YAML::XS', '0.59';
+requires 'DB_File';
 
 # Basic set of tools with huge tests
-requires 'AnyEvent', '7.11';
-requires 'App::Ack', '2.14';
-requires 'DBI', '1.634';
-requires 'EV', '4.22';
-requires 'MCE', '1.608';
-requires 'Moo', '2.000002';
-requires 'Moose', '2.1604';
-requires 'Perl::Tidy', '20150815';
-requires 'POE', '1.367';
-requires 'Template', '2.26';
-requires 'WWW::Mechanize', '1.75';
+requires 'AnyEvent';
+requires 'App::Ack';
+requires 'DBI';
+requires 'EV';
+requires 'MCE';
+requires 'Moo';
+requires 'Moose';
+requires 'Perl::Tidy';
+requires 'POE';
+requires 'Template';
+requires 'WWW::Mechanize';
 
 # GD
-requires 'GD', '2.56';
+requires 'GD';
 requires 'SVG', '2.64';
 requires 'GD::SVG', '0.33';
 
 # BioPerl needed
-requires 'IO::String', '1.08';
-requires 'Data::Stag', '0.14';
-requires 'Scalar::Util', '1.42';
-requires 'ExtUtils::Manifest', '1.70';
-requires 'CPAN', '2.10';
-requires 'Module::Build', '0.4214';
-requires 'Test::Harness', '3.36';
-requires 'Test::Most', '0.34';
-requires 'URI::Escape', '1.71';
+requires 'IO::String';
+requires 'Data::Stag';
+requires 'Scalar::Util';
+requires 'ExtUtils::Manifest';
+requires 'CPAN';
+requires 'Module::Build';
+requires 'Test::Harness';
+requires 'Test::Most';
+requires 'URI::Escape';
 
 # BioPerl recommended
 requires 'Algorithm::Munkres', '0.08';
@@ -46,7 +46,6 @@ requires 'Error', '0.17024';
 requires 'File::Sort', '1.01';
 requires 'Graph', '0.9704';
 requires 'HTML::TableExtract', '2.13';
-requires 'GraphViz';
 requires 'PostScript::TextBlock', '0.06';
 requires 'Set::Scalar', '1.29';
 requires 'Sort::Naturally', '1.03';
@@ -139,38 +138,36 @@ requires 'Import::Into', '1.002005';
 requires 'PPI::XS', '0.902';
 
 # Gtk3 stuffs
-requires 'Glib', '1.320';
-requires 'Cairo', '1.106';
-requires 'Cairo::GObject', '1.004';
-requires 'Glib::Object::Introspection', '0.040';
-requires 'Gtk3', '0.026';
+requires 'Glib';
+requires 'Cairo';
+requires 'Cairo::GObject';
+requires 'Glib::Object::Introspection';
+requires 'Gtk3';
 
 # Database and WWW
-requires 'DBD::mysql', '4.033';
-requires 'DBIx::Class::Helpers', '2.032000';
-requires 'DBIx::XHTML_Table', '1.47';
-requires 'DBM::Deep', '2.0013';
+requires 'DBD::mysql';
+requires 'DBIx::Class::Helpers';
+requires 'DBIx::XHTML_Table';
+requires 'DBM::Deep';
 requires 'MongoDB';
-requires 'Mojolicious', '6.40';
-requires 'IO::All', '0.86';
-requires 'IO::All::LWP', '0.14';
+requires 'Mojolicious';
+requires 'IO::All';
+requires 'IO::All::LWP';
 
-# text, rtf and xlsx
+# text and xlsx
 requires 'Roman', '1.24';
 requires 'Text::Table', '1.130';
 requires 'Time::Duration', '1.20';
 requires 'Excel::Writer::XLSX', '0.88';
 requires 'Spreadsheet::ParseExcel', '0.65';
 requires 'Spreadsheet::WriteExcel', '2.40';
-requires 'RTF::Writer', '1.11';
 requires 'Chart::Math::Axis', '1.06';
 
 # Math and Stat
 requires 'Math::Random::MT::Auto', '6.22';
-requires 'PDL', '2.015';
 requires 'Statistics::Lite', '3.62';
 requires 'Statistics::TTest', '1.1.0';
-requires 'Set::Light', '0.04';
+requires 'PDL';
 requires 'Math::GSL';
 requires 'Statistics::R';
 
