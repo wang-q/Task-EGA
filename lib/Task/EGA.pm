@@ -150,7 +150,7 @@ sub dependencies {
         [   'text and xlsx',
             1,
             [   ['Roman'],                   ['Text::Table'],
-                ['Time::Duration'],          ['Excel::Writer::XLSX'],
+                ['Time::Duration'],          [ 'Excel::Writer::XLSX', 0.88 ],
                 ['Spreadsheet::ParseExcel'], ['Spreadsheet::WriteExcel'],
                 ['Chart::Math::Axis'],
             ],
