@@ -65,7 +65,6 @@ sub dependencies {
                 [ 'Bio::ASN1::EntrezGene',                0 ],
                 [ 'Bio::Graphics',                        0 ],
                 [ 'Bio::Tools::Run::Alignment::Clustalw', 0 ],
-                [ 'Bio::DB::EUtilities',                  1.72 ],    # 1.73 inc::TestHelper
             ],
         ],
         [   'Bio::Phylo',

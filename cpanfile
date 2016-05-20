@@ -62,7 +62,6 @@ requires 'Bio::Seq';
 requires 'Bio::ASN1::EntrezGene';
 requires 'Bio::Graphics';
 requires 'Bio::Tools::Run::Alignment::Clustalw';
-requires 'Bio::DB::EUtilities', '1.72';
 
 # Bio::Phylo
 requires 'Math::CDF';
