@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use autodie;
 
-our $VERSION = '0.1.6';
+our $VERSION = '0.1.7';
 
 sub dependencies {
     return (

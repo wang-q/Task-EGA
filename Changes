@@ -2,6 +2,9 @@ Revision history for Task::EGA
 
 {{$NEXT}}
 
+0.1.7  2016-05-21 04:56:29 CST
+    - Remove Bio::DB::EUtilities
+
 0.1.6  2016-05-10 21:37:29 CST
     - Remove AlignDB::Util
 
