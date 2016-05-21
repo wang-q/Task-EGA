@@ -144,7 +144,6 @@ requires 'Gtk3';
 # Database and WWW
 requires 'DBD::mysql';
 requires 'DBIx::Class::Helpers';
-requires 'DBIx::XHTML_Table';
 requires 'DBM::Deep';
 requires 'MongoDB';
 requires 'Mojolicious';
