@@ -10,13 +10,13 @@ printf "\n## " >> ${FILE_CLOC}
 date           >> ${FILE_CLOC}
 echo           >> ${FILE_CLOC}
 echo '```text' >> ${FILE_CLOC}
-cloc ${DIR_CLOC} --exclude-dir .idea \
+cloc ${DIR_CLOC} --exclude-dir .idea --exclude-lang JSON,RobotFramework,XML,YAML \
     | egrep -v "^\s+" | egrep -v "(files|ignored)\." | egrep -v "https" \
     >> ${FILE_CLOC}
 echo           >> ${FILE_CLOC}
 find ${DIR_CLOC} -type d -not -name ".*" -maxdepth 1 \
     | grep -v "cpan$" \
-    | parallel --keep-order "echo; echo {}; cloc {} --exclude-dir .idea" \
+    | parallel --keep-order "echo; echo {}; cloc {} --exclude-dir .idea --exclude-lang JSON,RobotFramework,XML,YAML" \
     | egrep "SUM:|cpan" \
     >> ${FILE_CLOC}
 echo '```' >> ${FILE_CLOC}
@@ -188,4 +188,52 @@ SUM:                            22            414            134           1918
 SUM:                            25            286            138           1273
 /Users/wangq/Scripts/cpan/Task-EGA
 SUM:                             4             39             18            736
+```
+
+## Tue Jun 21 06:20:15 CST 2016
+
+```text
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Perl                           113           3654           1991          14419
+C/C++ Header                     2            769           3027           2693
+C                                2            159              3            774
+make                             2            213            103            595
+CMake                            1              4              0              8
+-------------------------------------------------------------------------------
+SUM:                           120           4799           5124          18489
+-------------------------------------------------------------------------------
+
+/Users/wangq/Scripts/cpan/AlignDB-Codon
+SUM:                             7            191            159            668
+/Users/wangq/Scripts/cpan/AlignDB-DeltaG
+SUM:                             3             87             85            146
+/Users/wangq/Scripts/cpan/AlignDB-Excel
+SUM:                             2            278            184            941
+/Users/wangq/Scripts/cpan/AlignDB-GC
+SUM:                             2            119             49            455
+/Users/wangq/Scripts/cpan/AlignDB-IntSpan
+SUM:                            16            912            487           2677
+/Users/wangq/Scripts/cpan/AlignDB-IntSpanXS
+SUM:                            24           1456           3153           5873
+/Users/wangq/Scripts/cpan/AlignDB-Run
+SUM:                             2             55             43            111
+/Users/wangq/Scripts/cpan/AlignDB-SQL
+SUM:                            12            177             72            781
+/Users/wangq/Scripts/cpan/AlignDB-Stopwatch
+SUM:                             2             91             49            210
+/Users/wangq/Scripts/cpan/AlignDB-ToXLSX
+SUM:                             2            214            122            864
+/Users/wangq/Scripts/cpan/AlignDB-Window
+SUM:                             2            195            219            627
+/Users/wangq/Scripts/cpan/App-Fasops
+SUM:                            18            449            144           2138
+/Users/wangq/Scripts/cpan/App-Rangeops
+SUM:                             8            213            187            713
+/Users/wangq/Scripts/cpan/App-RL
+SUM:                            15            288            136           1228
+/Users/wangq/Scripts/cpan/Task-EGA
+SUM:                             6             77             36           1068
 ```
