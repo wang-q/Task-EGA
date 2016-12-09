@@ -4,7 +4,7 @@
       "Qiang Wang <wang-q@outlook.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.047, Dist::Milla version v1.0.15, CPAN::Meta::Converter version 2.150005",
+   "generated_by" : "Dist::Milla version v1.0.17, Dist::Zilla version 6.006, CPAN::Meta::Converter version 2.150005",
    "license" : [
       "perl_5"
    ],
@@ -31,7 +31,7 @@
       },
       "develop" : {
          "requires" : {
-            "Dist::Milla" : "v1.0.15",
+            "Dist::Milla" : "v1.0.17",
             "Test::Pod" : "1.41"
          }
       },
@@ -125,7 +125,6 @@
             "Moo" : "0",
             "MooX::Options" : "0",
             "Moose" : "0",
-            "MooseX::AttributeHelpers" : "0",
             "MooseX::Storage" : "0",
             "PDF::API2" : "0",
             "PDL" : "0",
@@ -193,6 +192,7 @@
          "web" : "https://github.com/wang-q/Task-EGA"
       }
    },
-   "version" : "0.1.7"
+   "version" : "0.1.7",
+   "x_serialization_backend" : "JSON::XS version 3.01"
 }
 

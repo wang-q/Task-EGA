@@ -118,7 +118,6 @@ requires 'Test::Without::Module';
 # Moose related
 requires 'MooX::Options';
 requires 'MooseX::Storage';
-requires 'MooseX::AttributeHelpers';
 
 # Develop
 requires 'App::pmuninstall';
