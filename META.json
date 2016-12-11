@@ -23,6 +23,23 @@
          "xt"
       ]
    },
+   "optional_features" : {
+      "extra_set_of_my_own_modules" : {
+         "description" : "Extra set of my own modules",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "AlignDB::Codon" : "0",
+                  "AlignDB::DeltaG" : "0",
+                  "AlignDB::GC" : "0",
+                  "AlignDB::Run" : "0",
+                  "AlignDB::ToXLSX" : "0",
+                  "AlignDB::Window" : "0"
+               }
+            }
+         }
+      }
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -38,19 +55,15 @@
       "runtime" : {
          "requires" : {
             "Algorithm::Munkres" : "0",
-            "AlignDB::Codon" : "0",
-            "AlignDB::DeltaG" : "0",
-            "AlignDB::GC" : "0",
             "AlignDB::IntSpan" : "0",
-            "AlignDB::Run" : "0",
             "AlignDB::SQL" : "0",
             "AlignDB::Stopwatch" : "0",
-            "AlignDB::ToXLSX" : "0",
-            "AlignDB::Window" : "0",
             "AnyEvent" : "0",
             "App::Ack" : "0",
+            "App::Cmd" : "0.33",
             "App::Fasops" : "0",
             "App::RL" : "0",
+            "App::Rangeops" : "0",
             "App::pmuninstall" : "0",
             "Archive::Extract" : "0",
             "Array::Compare" : "0",
@@ -59,40 +72,37 @@
             "Bio::Phylo" : "0",
             "Bio::Seq" : "0",
             "Bio::Tools::Run::Alignment::Clustalw" : "0",
-            "CPAN" : "0",
+            "CPAN" : "1.81",
             "CPAN::Mini" : "0",
             "CPANDB" : "0",
             "Cairo" : "0",
             "Cairo::GObject" : "0",
             "Chart::Math::Axis" : "0",
+            "Clone" : "0",
             "Config::General" : "0",
             "Config::Tiny" : "0",
             "Convert::Binary::C" : "0",
             "DBD::CSV" : "0",
             "DBD::mysql" : "0",
             "DBI" : "0",
-            "DBIx::Class::Helpers" : "0",
-            "DBM::Deep" : "0",
             "DB_File" : "0",
             "Data::Dumper" : "0",
-            "Data::Stag" : "0",
+            "Data::Stag" : "0.11",
             "DateTime::Format::Natural" : "0",
             "Devel::CheckLib" : "0",
             "Dist::Milla" : "0",
             "EV" : "0",
             "Error" : "0",
             "Excel::Writer::XLSX" : "0.88",
-            "ExtUtils::Manifest" : "0",
+            "ExtUtils::Manifest" : "1.52",
             "File::Copy::Recursive" : "0",
             "File::Find::Rule" : "0",
             "File::HomeDir" : "0",
             "File::Listing" : "0",
-            "File::Remove" : "0",
-            "File::Rename" : "0",
-            "File::Sort" : "0",
             "Font::TTF::Font" : "0",
             "GD" : "0",
             "GD::SVG" : "0",
+            "Getopt::Long::Descriptive" : "0",
             "Glib" : "0",
             "Glib::Object::Introspection" : "0",
             "Graph" : "0",
@@ -106,9 +116,8 @@
             "LWP::Online" : "0",
             "LWP::Protocol::https" : "0",
             "LWP::Protocol::socks" : "0",
-            "List::Flatten" : "0",
             "List::MoreUtils" : "0",
-            "MCE" : "0",
+            "MCE" : "1.81",
             "Math::Bezier" : "0",
             "Math::BigFloat" : "0",
             "Math::BigInt" : "0",
@@ -118,7 +127,7 @@
             "Math::Random::MT::Auto" : "0",
             "Math::Round" : "0",
             "Math::VecStat" : "0",
-            "Module::Build" : "0",
+            "Module::Build" : "0.42",
             "Module::Path" : "0",
             "Mojolicious" : "0",
             "MongoDB" : "0",
@@ -133,6 +142,7 @@
             "Parallel::ForkManager" : "0",
             "Params::Validate" : "0",
             "Path::Class" : "0",
+            "Path::Tiny" : "0",
             "Perl::Tidy" : "0",
             "Pod::POM::Web" : "0",
             "PostScript::TextBlock" : "0",
@@ -150,13 +160,11 @@
             "Spreadsheet::ParseExcel" : "0",
             "Spreadsheet::WriteExcel" : "0",
             "Statistics::Basic" : "0",
-            "Statistics::Lite" : "0",
             "Statistics::R" : "0",
-            "Statistics::TTest" : "0",
             "String::Compare" : "0",
             "Template" : "0",
             "Test::Class" : "0",
-            "Test::Harness" : "0",
+            "Test::Harness" : "2.62",
             "Test::Most" : "0",
             "Test::Roo" : "0",
             "Test::Taint" : "0",
@@ -165,6 +173,7 @@
             "Text::CSV_XS" : "0",
             "Text::Format" : "0",
             "Text::Table" : "0",
+            "Tie::IxHash" : "0",
             "Time::Duration" : "0",
             "URI::Escape" : "0",
             "WWW::Mechanize" : "0",
@@ -176,7 +185,7 @@
             "XML::Writer" : "0",
             "XML::XML2JSON" : "0",
             "YAML" : "0",
-            "YAML::XS" : "0"
+            "YAML::Syck" : "0"
          }
       }
    },

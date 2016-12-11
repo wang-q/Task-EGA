@@ -1,20 +1,24 @@
 # Basic set of tools
 requires 'Archive::Extract';
 requires 'Config::Tiny';
+requires 'DB_File';
 requires 'File::Find::Rule';
+requires 'Getopt::Long::Descriptive';
 requires 'List::MoreUtils';
 requires 'JSON::XS';
+requires 'Path::Tiny';
 requires 'Text::CSV_XS';
+requires 'Tie::IxHash';
 requires 'YAML';
-requires 'YAML::XS';
-requires 'DB_File';
+requires 'YAML::Syck';
 
 # Basic set of tools with huge tests
 requires 'AnyEvent';
 requires 'App::Ack';
+requires 'App::Cmd', '0.33';
 requires 'DBI';
 requires 'EV';
-requires 'MCE';
+requires 'MCE', '1.81';
 requires 'Moo';
 requires 'Moose';
 requires 'Perl::Tidy';
@@ -29,21 +33,21 @@ requires 'GD::SVG';
 
 # BioPerl needed
 requires 'IO::String';
-requires 'Data::Stag';
+requires 'Data::Stag', '0.11';
 requires 'Scalar::Util';
-requires 'ExtUtils::Manifest';
-requires 'CPAN';
-requires 'Module::Build';
-requires 'Test::Harness';
+requires 'ExtUtils::Manifest', '1.52';
+requires 'Module::Build', '0.42';
+requires 'CPAN', '1.81';
+requires 'Test::Harness', '2.62';
 requires 'Test::Most';
 requires 'URI::Escape';
 
 # BioPerl recommended
 requires 'Algorithm::Munkres';
 requires 'Array::Compare';
+requires 'Clone';
 requires 'Convert::Binary::C';
 requires 'Error';
-requires 'File::Sort';
 requires 'Graph';
 requires 'HTML::TableExtract';
 requires 'PostScript::TextBlock';
@@ -60,8 +64,6 @@ requires 'XML::Writer';
 # BioPerl
 requires 'Bio::Seq';
 requires 'Bio::ASN1::EntrezGene';
-requires 'Bio::Graphics';
-requires 'Bio::Tools::Run::Alignment::Clustalw';
 
 # Bio::Phylo
 requires 'Math::CDF';
@@ -93,21 +95,23 @@ requires 'File::HomeDir';
 requires 'DBD::CSV';
 requires 'Path::Class';
 requires 'File::Listing';
-requires 'File::Remove';
-requires 'File::Rename';
 requires 'File::Copy::Recursive';
-requires 'List::Flatten';
 requires 'String::Compare';
 requires 'LWP::Online';
 requires 'LWP::Protocol::https';
 requires 'LWP::Protocol::socks';
 
-# AlignDB
+# Basic set of my own modules
 requires 'AlignDB::IntSpan';
 requires 'AlignDB::Stopwatch';
-requires 'AlignDB::Run';
+requires 'AlignDB::SQL';
 requires 'App::Fasops';
 requires 'App::RL';
+requires 'App::Rangeops';
+
+# Bio::Graphics and BioPerl-run
+requires 'Bio::Graphics';
+requires 'Bio::Tools::Run::Alignment::Clustalw';
 
 # Test::*
 requires 'Test::Class';
@@ -142,8 +146,6 @@ requires 'Gtk3';
 
 # Database and WWW
 requires 'DBD::mysql';
-requires 'DBIx::Class::Helpers';
-requires 'DBM::Deep';
 requires 'MongoDB';
 requires 'Mojolicious';
 requires 'IO::All';
@@ -160,17 +162,16 @@ requires 'Chart::Math::Axis';
 
 # Math and Stat
 requires 'Math::Random::MT::Auto';
-requires 'Statistics::Lite';
-requires 'Statistics::TTest';
 requires 'PDL';
 requires 'Math::GSL';
 requires 'Statistics::R';
 
-# AlignDB extra
-requires 'AlignDB::Window';
-requires 'AlignDB::Codon';
-requires 'AlignDB::DeltaG';
-requires 'AlignDB::GC';
-requires 'AlignDB::SQL';
-requires 'AlignDB::ToXLSX';
+feature 'extra_set_of_my_own_modules', 'Extra set of my own modules' => sub {
+    requires 'AlignDB::Window';
+    requires 'AlignDB::Codon';
+    requires 'AlignDB::DeltaG';
+    requires 'AlignDB::GC';
+    requires 'AlignDB::ToXLSX';
+    requires 'AlignDB::Run';
+};
 
