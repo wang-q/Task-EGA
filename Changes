@@ -2,6 +2,11 @@ Revision history for Task::EGA
 
 {{$NEXT}}
 
+0.2.0  2016-12-12 00:37:43 CST
+    - Make non-CPAN modules optional
+    - Remove File::Sort, File::Remove, File::Rename, List::Flatten, DBIx::Class::Helpers, DBM::Deep,
+      Statistics::Lite and Statistics::TTest
+
 0.1.8  2016-12-10 00:42:52 CST
     - Remove MooseX::AttributeHelpers
 
