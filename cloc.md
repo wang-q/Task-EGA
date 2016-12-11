@@ -10,8 +10,8 @@ printf "\n## " >> ${FILE_CLOC}
 date           >> ${FILE_CLOC}
 echo           >> ${FILE_CLOC}
 echo '```text' >> ${FILE_CLOC}
-cloc ${DIR_CLOC} --exclude-dir .idea --exclude-lang JSON,RobotFramework,XML,YAML \
-    | egrep -v "^\s+" | egrep -v "(files|ignored)\." | egrep -v "https" \
+cloc ${DIR_CLOC} --exclude-dir .idea --exclude-dir cmake-build-debug --exclude-lang JSON,RobotFramework,XML,YAML \
+    | egrep -v "^\s+" | egrep -v "(files|ignored)\." | egrep -v "https|AlDanial" \
     >> ${FILE_CLOC}
 echo           >> ${FILE_CLOC}
 find ${DIR_CLOC} -type d -not -name ".*" -maxdepth 1 \
@@ -92,7 +92,6 @@ Total Estimated Cost to Develop                           = $ 400,671
 ## Mon Apr 11 10:24:14 CST 2016
 
 ```text
-
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -144,7 +143,6 @@ SUM:                             4             39             18            741
 ## Sat May 14 04:13:02 CST 2016
 
 ```text
-
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -193,7 +191,6 @@ SUM:                             4             39             18            736
 ## Tue Jun 21 06:20:15 CST 2016
 
 ```text
-
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
