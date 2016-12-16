@@ -2,6 +2,9 @@ Revision history for Task::EGA
 
 {{$NEXT}}
 
+0.2.1 2016-12-16T00:42:59Z
+    - Switch to Minilla
+
 0.2.0  2016-12-12 00:37:43 CST
     - Make non-CPAN modules optional
     - Remove File::Sort, File::Remove, File::Rename, List::Flatten, DBIx::Class::Helpers, DBM::Deep,
