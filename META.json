@@ -192,6 +192,6 @@
          "web" : "https://github.com/wang-q/Task-EGA"
       }
    },
-   "version" : "0.2.1",
+   "version" : "0.2.2",
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }
