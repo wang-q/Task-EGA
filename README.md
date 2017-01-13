@@ -4,7 +4,7 @@ Task::EGA - EGA bundle
 
 # SYNOPSIS
 
-    cpanm --mirror-only --mirror https://stratopan.com/wangq/ega/full --interactive Task::EGA
+    cpanm --mirror-only --mirror https://stratopan.com/wangq/ega/master --interactive Task::EGA
 
 # AUTHOR
 

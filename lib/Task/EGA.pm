@@ -98,12 +98,17 @@ sub dependencies {
                 [ 'LWP::Protocol::https', 0 ], [ 'LWP::Protocol::socks', 0 ],
             ],
         ],
-        [   'Basic set of my own modules',
+        [   'My own modules',
             1,
             [   [ 'AlignDB::IntSpan',   0 ],
                 [ 'AlignDB::Stopwatch', 0 ],
                 [ 'AlignDB::SQL',       0 ],
                 [ 'AlignDB::Codon',     0 ],
+                [ 'AlignDB::Window',    0 ],
+                [ 'AlignDB::DeltaG',    0 ],
+                [ 'AlignDB::GC',        0 ],
+                [ 'AlignDB::ToXLSX',    0 ],
+                [ 'AlignDB::Run',       0 ],
                 [ 'App::Fasops',        0 ],
                 [ 'App::RL',            0 ],
                 [ 'App::Rangeops',      0 ],
@@ -160,15 +165,8 @@ sub dependencies {
                 [ 'Statistics::R', 0 ],
             ],
         ],
-        [   'Extra set of my own modules',
-            0,
-            [   [ 'AlignDB::Window', 0 ],
-                [ 'AlignDB::DeltaG', 0 ],
-                [ 'AlignDB::GC',     0 ],
-                [ 'AlignDB::ToXLSX', 0 ],
-                [ 'AlignDB::Run',    0 ],
-            ],
-        ],
+
+        # [ 'Extra set of my own modules', 0, [], ],
     );
 }
 
@@ -245,7 +243,7 @@ Task::EGA - EGA bundle
 
 =head1 SYNOPSIS
 
-    cpanm --mirror-only --mirror https://stratopan.com/wangq/ega/full --interactive Task::EGA
+    cpanm --mirror-only --mirror https://stratopan.com/wangq/ega/master --interactive Task::EGA
 
 =head1 AUTHOR
 

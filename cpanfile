@@ -101,10 +101,16 @@ requires 'LWP::Online';
 requires 'LWP::Protocol::https';
 requires 'LWP::Protocol::socks';
 
-# Basic set of my own modules
+# My own modules
 requires 'AlignDB::IntSpan';
 requires 'AlignDB::Stopwatch';
 requires 'AlignDB::SQL';
+requires 'AlignDB::Codon';
+requires 'AlignDB::Window';
+requires 'AlignDB::DeltaG';
+requires 'AlignDB::GC';
+requires 'AlignDB::ToXLSX';
+requires 'AlignDB::Run';
 requires 'App::Fasops';
 requires 'App::RL';
 requires 'App::Rangeops';
@@ -125,13 +131,11 @@ requires 'MooseX::Storage';
 
 # Develop
 requires 'App::pmuninstall';
-requires 'CPAN::Mini';
 requires 'CPANDB';
-requires 'Dist::Milla';
+requires 'Minilla';
 requires 'Module::Path';
 requires 'Pod::POM::Web';
 requires 'Search::Indexer';
-requires 'Parallel::ForkManager';
 requires 'Proc::Background';
 requires 'Devel::CheckLib';
 requires 'Import::Into';
@@ -156,8 +160,7 @@ requires 'Roman';
 requires 'Text::Table';
 requires 'Time::Duration';
 requires 'Excel::Writer::XLSX', '0.88';
-requires 'Spreadsheet::ParseExcel';
-requires 'Spreadsheet::WriteExcel';
+requires 'Spreadsheet::XLSX';
 requires 'Chart::Math::Axis';
 
 # Math and Stat
@@ -165,13 +168,4 @@ requires 'Math::Random::MT::Auto';
 requires 'PDL';
 requires 'Math::GSL';
 requires 'Statistics::R';
-
-feature 'extra_set_of_my_own_modules', 'Extra set of my own modules' => sub {
-    requires 'AlignDB::Window';
-    requires 'AlignDB::Codon';
-    requires 'AlignDB::DeltaG';
-    requires 'AlignDB::GC';
-    requires 'AlignDB::ToXLSX';
-    requires 'AlignDB::Run';
-};
 
